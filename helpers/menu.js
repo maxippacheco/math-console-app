@@ -15,8 +15,13 @@ const questions = [
 			},
 			{
 				value: 2,
-				name: `${ '2.'.green } Factor polynomials`
+				name: `${ '2.'.green } Trigonometry`
 			},
+			{
+				value: 3,
+				name: `${ '2.'.green } Geometry`
+			},
+
 			{
 				value: 0,
 				name: `${ '0.'.green } Quit`
@@ -35,7 +40,7 @@ const menuOptions = async() => {
 		case 1:
 			console.clear();
 			await functionMenu();
-			break;
+		break;
 	}
 
 	return menu;
