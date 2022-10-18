@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const { functionMenu } = require('./functions');
+const { geometryMenu } = require('./geometry_menu');
 require('colors')
 
 
@@ -15,11 +16,11 @@ const questions = [
 			},
 			{
 				value: 2,
-				name: `${ '2.'.green } Trigonometry`
+				name: `${ '2.'.green } Geometry`
 			},
 			{
 				value: 3,
-				name: `${ '2.'.green } Geometry`
+				name: `${ '2.'.green } Trigonometry`
 			},
 
 			{
@@ -41,6 +42,10 @@ const menuOptions = async() => {
 			console.clear();
 			await functionMenu();
 		break;
+		
+		case 2:
+			await geometryMenu();
+		break;
 	}
 
 	return menu;
@@ -49,6 +54,4 @@ const menuOptions = async() => {
 
 
 
-module.exports = {
-	menuOptions,
-}
+module.exports.menuOptions = menuOptions; 
